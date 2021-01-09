@@ -104,7 +104,7 @@ const addItems=(x)=>{
     if(x!==""){
 
         item.push(x);
-        
+
     }
     
 
@@ -114,9 +114,9 @@ const addItems=(x)=>{
 const removItems=(x)=>{
     const items=itemGet();
     
-    items.forEach((item)=>{
+    items.forEach((item,index)=>{
         if(x.match(item)){
-            items.pop(item);
+            items.splice(index,1);
         }
     })
 
@@ -153,7 +153,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 
         container.appendChild(div)
     })
+
+    console.log(itemGet())
 })
+
+
 
 //if statement fot the ternary operators
 
